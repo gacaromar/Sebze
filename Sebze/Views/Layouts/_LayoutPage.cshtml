@@ -1,0 +1,792 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="tr-TR">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/css/flexslider.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/css/jquery.css" rel="stylesheet" />
+    <link href="~/Content/css/owl.css" rel="stylesheet" />
+    <link href="~/Content/css/responsive.css" rel="stylesheet" />
+    <link href="~/Content/css/revslider.css" rel="stylesheet" />
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/jquery.mobile-menu.js"></script>
+    <script src="~/Scripts/ai.0.22.19-build00125.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    @*<script src="~/Scripts/cloud-zoom.js"></script>*@
+    <script src="~/Scripts/common.js"></script>
+    <script src="~/Scripts/jquery.bxslider.js"></script>
+    <script src="~/Scripts/owl.carousel.js"></script>
+    <script src="~/Scripts/parallax.js"></script>
+    <script src="~/Scripts/revslider.js"></script>
+</head>
+<body>
+    <div id="page">
+        <div class="header-banner">
+            <div class="assetBlock">
+                <div style="height: 20px; overflow: hidden;" id="slideshow">
+                    <p style="display: block;">
+                        Sezon Sonu ! - <span>%50</span> indirimler!
+                    </p>
+                    <p style="display: none;">
+                        Taze mevsim meyveleri! <span></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="header">
+            <div class="header-container container">
+                <div class="row">
+                    <div class="logo">
+                        <a href="@Url.Action("Index", "Home")" title="Flavours HTML">
+                            <div>
+                                <img src="\Content\images\logo.png" alt="Flavours Store">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="fl-nav-menu">
+
+                        <nav>
+                            <div class="mm-toggle-wrap">
+                                <div class="mm-toggle"><i class="icon-align-justify"></i><span class="mm-label">Menu</span> </div>
+                            </div>
+                            <div class="nav-inner">
+                                <!-- BEGIN NAV -->
+                                <ul id="nav" class="hidden-xs">
+                                    <li id="nav-home" class="level0 parent drop-menu">
+                                        <a class="level-top active" href="@Url.Action("Index", "Home")"><span>Anasayfa</span></a>
+                                        @*<ul class="level1" style="display: none;">
+                                                <li class="level1 parent"><a href="index.htm"><span>Home Version 1</span></a></li>
+                                                <li class="level1 parent"><a href="http://htmldemo.themesmart.net/flavours/version2/"><span>Home Version 2</span></a></li>
+                                            </ul>*@
+                                    </li>
+                                    <li class="mega-menu">
+                                        <a class="level-top" href="#"><span>Sebzeler</span></a>
+                                        <div class="level0-wrapper dropdown-6col" style="left: 0; display: none;">
+                                            <div class="container">
+                                                <div class="level0-wrapper2">
+                                                    <div class="col-1">
+                                                        <div class="nav-block nav-block-center">
+                                                            <!--mega menu-->
+                                                            <ul class="level0">
+                                                                <li class="level3 nav-6-1 parent item">
+                                                                    <a href="#"><span>Bread Saladsâ€</span></a>
+                                                                    <!--sub sub category-->
+                                                                    <ul class="level1">
+                                                                        <li class="level2 nav-6-1-1">
+                                                                            <a href="#">
+                                                                                <span>
+                                                                                    Cappon Magro
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Dakos</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Fattoush</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Panzanella</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                    </ul>
+                                                                    <!--level1-->
+                                                                    <!--sub sub category-->
+                                                                </li>
+                                                                <!--level3 nav-6-1 parent item-->
+                                                                <li class="level3 nav-6-1 parent item">
+                                                                    <a href="#"><span>Fruit Saladsâ€</span></a>
+                                                                    <!--sub sub category-->
+                                                                    <ul class="level1">
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Candle Salad</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Frogeye Salad</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Green Papaya Salad</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Waldorf salad</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                    </ul>
+                                                                    <!--level1-->
+                                                                    <!--sub sub category-->
+                                                                </li>
+                                                                <!--level3 nav-6-1 parent item-->
+                                                                <li class="level3 nav-6-1 parent item">
+                                                                    <a href="#"><span>Salad Dressings</span></a>
+                                                                    <!--sub sub category-->
+                                                                    <ul class="level1">
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Louis Dressings</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>French Dressings</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Gingner Dressings</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Italian Dressings</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                    </ul>
+                                                                    <!--level1-->
+                                                                    <!--sub sub category-->
+                                                                </li>
+                                                                <!--level3 nav-6-1 parent item-->
+                                                                <li class="level3 nav-6-1 parent item">
+                                                                    <a href="#"><span>Leaf Vegetable</span></a>
+                                                                    <!--sub sub category-->
+                                                                    <ul class="level1">
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Fenugreek</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Spinach</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Malva</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Cabbage</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                    </ul>
+                                                                    <!--level1-->
+                                                                    <!--sub sub category-->
+                                                                </li>
+                                                                <!--level3 nav-6-1 parent item-->
+                                                                <li class="level3 nav-6-1 parent item">
+                                                                    <a href="#"><span>Stem Vegetables</span></a>
+                                                                    <!--sub sub category-->
+                                                                    <ul class="level1">
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Crithmum</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Fallopia Japonica</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Celery</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Cardoon</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                    </ul>
+                                                                    <!--level1-->
+                                                                    <!--sub sub category-->
+                                                                </li>
+                                                                <!--level3 nav-6-1 parent item-->
+                                                                <li class="level3 nav-6-1 parent item">
+                                                                    <a href="#"><span>Root Vegetables</span></a>
+                                                                    <!--sub sub category-->
+                                                                    <ul class="level1">
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Garlic</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Onion</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Potato</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                        <li class="level2 nav-6-1-1"> <a href="#"><span>Taros</span></a> </li>
+                                                                        <!--level2 nav-6-1-1-->
+                                                                    </ul>
+                                                                    <!--level1-->
+                                                                    <!--sub sub category-->
+                                                                </li>
+                                                                <!--level3 nav-6-1 parent item-->
+                                                            </ul>
+                                                            <!--level0-->
+                                                        </div>
+                                                        <!--nav-block nav-block-center-->
+                                                    </div>
+                                                    <!--col-1-->
+                                                    <div class="col-2">
+                                                        <div class="menu_image">
+                                                            <a title="" href="#"><img alt="menu_image" src="\Content\images\menu-bag.png"></a>
+                                                        </div>
+
+                                                    </div>
+                                                    <!--col-2-->
+                                                </div>
+                                                <!--level0-wrapper2-->
+                                            </div>
+                                            <!--container-->
+                                        </div>
+                                        <!--level0-wrapper dropdown-6col-->
+                                        <!--mega menu-->
+                                    </li>
+                                    <li class="mega-menu">
+                                        <a class="level-top" href="#"><span>Meyveler</span></a>
+                                        <div class="level0-wrapper dropdown-6col" style="left: 0px; display: none;">
+                                            <div class="container">
+                                                <div class="level0-wrapper2">
+                                                    <div class="nav-block nav-block-center">
+                                                        <!--mega menu-->
+                                                        <ul class="level0">
+                                                            <li class="level3 nav-6-1 parent item">
+                                                                <a href="#"><span>Cold Soups</span></a>
+                                                                <!--sub sub category-->
+                                                                <ul class="level1">
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Red Bean Soup</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Fruit Soup</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Naengguk</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Borscht</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                </ul>
+                                                                <!--level1-->
+                                                                <!--sub sub category-->
+                                                            </li>
+                                                            <!--level3 nav-6-1 parent item-->
+                                                            <li class="level3 nav-6-1 parent item">
+                                                                <a href="#"><span>Cream Soups</span></a>
+                                                                <!--sub sub category-->
+                                                                <ul class="level1">
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Chowder</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Asparagus Soup</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Broccoli Soup</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Mushroom Soup</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                </ul>
+                                                                <!--level1-->
+                                                                <!--sub sub category-->
+                                                            </li>
+                                                            <!--level3 nav-6-1 parent item-->
+                                                            <li class="level3 nav-6-1 parent item">
+                                                                <a href="#"><span>Vegitable Soups</span></a>
+                                                                <!--sub sub category-->
+                                                                <ul class="level1">
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>French Onion Soup</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Leek Soup</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Minestrone</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Spring Soup</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                </ul>
+                                                                <!--level1-->
+                                                                <!--sub sub category-->
+                                                            </li>
+                                                            <!--level3 nav-6-1 parent item-->
+                                                            <li class="level3 nav-6-1 parent item">
+                                                                <a href="#"><span>Bean Soups</span></a>
+                                                                <!--sub sub category-->
+                                                                <ul class="level1">
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Bouneschlupp</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>JÃ³kai Bean Soup</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Kwati Soup</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Senate bean</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                </ul>
+                                                                <!--level1-->
+                                                                <!--sub sub category-->
+                                                            </li>
+                                                            <!--level3 nav-6-1 parent item-->
+                                                            <li class="level3 nav-6-1 parent item">
+                                                                <a href="#"><span>Bread Soups</span></a>
+                                                                <!--sub sub category-->
+                                                                <ul class="level1">
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Tomato Soup</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Manchow Soup</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Sweet Corn Soup</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Shorba Soup</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                </ul>
+                                                                <!--level1-->
+                                                                <!--sub sub category-->
+                                                            </li>
+                                                            <!--level3 nav-6-1 parent item-->
+                                                            <li class="level3 nav-6-1 parent item">
+                                                                <a href="#"><span>Chinese Soups</span></a>
+                                                                <!--sub sub category-->
+                                                                <ul class="level1">
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Hot & Sour</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Noodle Soup</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Corn Crab Soup</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Sago Soup</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                </ul>
+                                                                <!--level1-->
+                                                                <!--sub sub category-->
+                                                            </li>
+                                                            <!--level3 nav-6-1 parent item-->
+                                                        </ul>
+                                                        <!--level0-->
+                                                    </div>
+                                                    <!--nav-block nav-block-center-->
+                                                    <div class="nav-add">
+                                                        <div class="push_item">
+                                                            <div class="push_img">
+                                                                <a href="#"><img src="\Content\images\menu-img2.jpg" alt="menu item 1"></a>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="push_item">
+                                                            <div class="push_img">
+                                                                <a href="#"><img src="\Content\images\menu-img1.jpg" alt="menu item 2"></a>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="push_item">
+                                                            <div class="push_img">
+                                                                <a href="#"><img src="\Content\images\menu-img3.jpg" alt="menu item 3"></a>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="push_item push_item_last">
+                                                            <div class="push_img">
+                                                                <a href="#"><img src="\Content\images\menu-img4.jpg" alt="menu item 4"></a>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--level0-wrapper2-->
+                                            </div>
+                                            <!--container-->
+                                        </div>
+                                        <!--level0-wrapper dropdown-6col-->
+                                        <!--mega menu-->
+                                    </li>
+                                    <li class="mega-menu">
+                                        <a class="level-top" href="#"><span>Hakkımızda</span></a>
+                                        <div class="level0-wrapper dropdown-6col" style="left: 0px; display: none;">
+                                            <div class="container">
+                                                <div class="level0-wrapper2">
+                                                    <div class="nav-block nav-block-center">
+                                                        <!--mega menu-->
+
+                                                        <ul class="level0">
+                                                            <li class="level3 nav-6-1 parent item">
+                                                                <a href="#"><span>Indian</span></a>
+                                                                <!--sub sub category-->
+                                                                <ul class="level1">
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Aloo Chaat</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Batata Vada</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Kachori</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Panipuri</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                </ul>
+                                                                <!--level1-->
+                                                                <!--sub sub category-->
+                                                            </li>
+                                                            <!--level3 nav-6-1 parent item-->
+                                                            <li class="level3 nav-6-1 parent item">
+                                                                <a href="#"><span>Pizza</span></a>
+                                                                <!--sub sub category-->
+                                                                <ul class="level1">
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Greek Pizza</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Pizza Rolls</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Grilled Pizza</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Pizza Strips</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                </ul>
+                                                                <!--level1-->
+                                                                <!--sub sub category-->
+                                                            </li>
+                                                            <!--level3 nav-6-1 parent item-->
+                                                            <li class="level3 nav-6-1 parent item">
+                                                                <a href="#"><span>McDonald's</span></a>
+                                                                <!--sub sub category-->
+                                                                <ul class="level1">
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Kiwiburger</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Happy Meal</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>McMuffin</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>McGriddles</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                </ul>
+                                                                <!--level1-->
+                                                                <!--sub sub category-->
+                                                            </li>
+                                                            <!--level3 nav-6-1 parent item-->
+                                                            <li class="level3 nav-6-1 parent item">
+                                                                <a href="#"><span>Wendy's Foods</span></a>
+                                                                <!--sub sub category-->
+                                                                <ul class="level1">
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Bacon Deluxe</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Baconator</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Frescata</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Frosty</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                </ul>
+                                                                <!--level1-->
+                                                                <!--sub sub category-->
+                                                            </li>
+                                                            <!--level3 nav-6-1 parent item-->
+                                                            <li class="level3 nav-6-1 parent item">
+                                                                <a href="#"><span>Burger King</span></a>
+                                                                <!--sub sub category-->
+                                                                <ul class="level1">
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Big King</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>TenderCrisp</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Whopper</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Kuro Burger</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                </ul>
+                                                                <!--level1-->
+                                                                <!--sub sub category-->
+                                                            </li>
+                                                            <!--level3 nav-6-1 parent item-->
+                                                            <li class="level3 nav-6-1 parent item">
+                                                                <a href="#"><span>Sandwiches</span></a>
+                                                                <!--sub sub category-->
+                                                                <ul class="level1">
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Hamburgers</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span> Hot Dogsâ€</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>American Sandwiches</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                    <li class="level2 nav-6-1-1"> <a href="#"><span>Chilean Sandwiches</span></a> </li>
+                                                                    <!--level2 nav-6-1-1-->
+                                                                </ul>
+                                                                <!--level1-->
+                                                                <!--sub sub category-->
+                                                            </li>
+                                                            <!--level3 nav-6-1 parent item-->
+                                                        </ul>
+                                                        <!--level0-->
+                                                    </div>
+                                                    <!--nav-block nav-block-center-->
+                                                </div>
+                                                <!--level0-wrapper2-->
+                                            </div>
+                                            <!--container-->
+                                        </div>
+                                        <!--level0-wrapper dropdown-6col-->
+                                        <!--mega menu-->
+                                    </li>
+                                    <li class="mega-menu"> <a class="level-top" href="#"><span>İletişim</span></a> </li>
+                                    <li class="level0 parent drop-menu hidden">
+                                        <a href="#"><span>Pages</span> </a>
+                                        <!--sub sub category-->
+                                        <ul class="level1">
+                                            <li class="level1 first"><a href="#"><span>Product Grid</span></a></li>
+                                            <li class="level1 nav-10-2"> <a href="list.html"> <span>Product List</span> </a> </li>
+                                            <li class="level1 nav-10-3"> <a href="product-detail.html"> <span>Product Detail</span> </a> </li>
+                                            <li class="level1 nav-10-4"> <a href="shopping-cart.html"> <span>Cart Page</span> </a> </li>
+                                            <li class="level1 first parent">
+                                                <a href="checkout.html"><span>Checkout</span></a>
+                                                <!--sub sub category-->
+                                                <ul class="level2 right-sub">
+                                                    <li class="level2 nav-2-1-1 first"><a href="checkout-method.html"><span>Method</span></a></li>
+                                                    <li class="level2 nav-2-1-5 last"><a href="checkout-billing-info.html"><span>Billing Info</span></a></li>
+                                                </ul>
+                                                <!--sub sub category-->
+                                            </li>
+                                            <li class="level1 nav-10-4"> <a href="wishlist.html"> <span>Wishlist</span> </a> </li>
+                                            <li class="level1"> <a href="dashboard.html"> <span>Dashboard</span> </a> </li>
+                                            <li class="level1"> <a href="multiple-addresses.html"> <span>Multiple Addresses</span> </a> </li>
+                                            <li class="level1"> <a href="about-us.html"> <span>About us</span> </a> </li>
+                                            <li class="level1 first parent">
+                                                <a href="blog.html"><span>Blog</span></a>
+                                                <!--sub sub category-->
+                                                <ul class="level2 right-sub">
+                                                    <li class="level2 nav-2-1-1 first"><a href="blog-detail.html"><span>Blog Detail</span></a></li>
+                                                </ul>
+                                                <!--sub sub category-->
+                                            </li>
+                                            <li class="level1"><a href="contact-us.html"><span>Contact us</span></a> </li>
+                                            <li class="level1"><a href="404error.html"><span>404 Error Page</span></a> </li>
+                                            <li class="level1"><a href="login.html"><span>Login Page</span></a> </li>
+                                            <li class="level1"><a href="quickview.html"><span>Quick View</span></a> </li>
+                                            <li class="level1"><a href="newsletter.html"><span>Newsletter</span></a> </li>
+                                        </ul>
+                                    </li>
+                                    <li class="fl-custom-tabmenulink mega-menu hidden">
+                                        <a href="#" class="level-top"> <span>Custom</span> </a>
+                                        <div class="level0-wrapper fl-custom-tabmenu" style="left: 0px; display: none;">
+                                            <div class="container">
+                                                <div class="header-nav-dropdown-wrapper clearer">
+                                                    <div class="grid12-3">
+
+                                                        <div>
+                                                            <img src="\Content\images\custom-img1.jpg" alt="custom-image">
+                                                        </div>
+                                                        <h4 class="heading">SALE UP TO 30% OFF</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                    </div>
+                                                    <div class="grid12-3">
+
+                                                        <div>
+                                                            <img src="\Content\images\custom-img2.jpg" alt="custom-image">
+                                                        </div>
+                                                        <h4 class="heading">SALE UP TO 30% OFF</h4>
+                                                        <p>Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.</p>
+                                                    </div>
+                                                    <div class="grid12-3">
+                                                        <div>
+                                                            <img src="\Content\images\custom-img3.jpg" alt="custom-image">
+                                                        </div>
+                                                        <h4 class="heading">SALE UP TO 30% OFF</h4>
+                                                        <p>Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.</p>
+                                                    </div>
+                                                    <div class="grid12-3">
+                                                        <div>
+                                                            <img src="\Content\images\custom-img4.jpg" alt="custom-image">
+                                                        </div>
+                                                        <h4 class="heading">SALE UP TO 30% OFF</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!--nav-->
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="fl-header-right">
+                    <div class="fl-links">
+                        <div class="no-js">
+                            <a title="Company" class="clicker"></a>
+                            <div class="fl-nav-links">
+                                <div class="language-currency hidden">
+                                    <div class="fl-language">
+                                        <ul class="lang">
+                                            <li><a href="#"> <img src="\Content\images\english.png" alt="English"> <span>English</span> </a></li>
+                                            <li><a href="#"> <img src="\Content\images\francais.png" alt="French"> <span>French</span> </a></li>
+                                            <li><a href="#"> <img src="\Content\images\german.png" alt="German"> <span>German</span> </a></li>
+                                        </ul>
+                                    </div>
+                                    <!--fl-language-->
+                                    <!-- END For version 1,2,3,4,6 -->
+                                    <!-- For version 1,2,3,4,6 -->
+                                    <div class="fl-currency">
+                                        <ul class="currencies_list">
+                                            <li><a href="#" title="EGP"> Â£</a></li>
+                                            <li><a href="#" title="EUR"> â‚¬</a></li>
+                                            <li><a href="#" title="USD"> $</a></li>
+                                        </ul>
+                                    </div>
+                                    <!--fl-currency-->
+                                    <!-- END For version 1,2,3,4,6 -->
+                                </div>
+                                <ul class="links">
+                                    <li><a href="dashboard.html" title="My Account">Hesabım</a></li>
+                                    <li><a href="wishlist.html" title="Wishlist">Siparişlerim</a></li>
+                                    <li><a href="checkout.html" title="Checkout">Aktif Gönderilerim</a></li>
+                                    <li><a href="blog.html" title="Blog"><span>Kargom</span></a></li>
+                                    <li class="last @{if()}" id="liLogin"><a href="login.html" title="Giriş"><span>Giriş</span></a></li>
+                                    <li class="last hidden" id="liLogout"><a href="login.html" title="Çıkış"><span>Çıkış</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fl-cart-contain">
+                        <div class="mini-cart">
+                            <div class="basket"> <a href="shopping-cart.html"><span> 2 </span></a> </div>
+                            <div class="fl-mini-cart-content" style="display: none;">
+                                <div class="block-subtitle">
+                                    <div class="top-subtotal">2 items, <span class="price">$259.99</span> </div>
+                                    <!--top-subtotal-->
+                                    <!--pull-right-->
+                                </div>
+                                <!--block-subtitle-->
+                                <ul class="mini-products-list" id="cart-sidebar">
+                                    <li class="item first">
+                                        <div class="item-inner">
+                                            <a class="product-image" title="timi &amp; leslie Sophia Diaper Bag, Lemon Yellow/Shadow White" href="#l"><img alt="timi &amp; leslie Sophia Diaper Bag, Lemon Yellow/Shadow White" src="\Content\images\products-images\p4.jpg"></a>
+                                            <div class="product-details">
+                                                <div class="access"><a class="btn-remove1" title="Remove This Item" href="#">Remove</a> <a class="btn-edit" title="Edit item" href="#"><i class="icon-pencil"></i><span class="hidden">Edit item</span></a> </div>
+                                                <!--access-->
+                                                <strong>1</strong> x <span class="price">$179.99</span>
+                                                <p class="product-name"><a href="product-detail.html">timi &amp; leslie Sophia Diaper Bag...</a></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item last">
+                                        <div class="item-inner">
+                                            <a class="product-image" title="JP Lizzy Satchel Designer Diaper Bag - Slate Citron" href="#"><img alt="JP Lizzy Satchel Designer Diaper Bag - Slate Citron" src="\Content\images\products-images\p3.jpg"></a>
+                                            <div class="product-details">
+                                                <div class="access"><a class="btn-remove1" title="Remove This Item" href="#">Remove</a> <a class="btn-edit" title="Edit item" href="#"><i class="icon-pencil"></i><span class="hidden">Edit item</span></a> </div>
+                                                <!--access-->
+                                                <strong>1</strong> x <span class="price">$80.00</span>
+                                                <p class="product-name"><a href="product-detail.html">JP Lizzy Satchel Designer Diaper Ba...</a></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="actions">
+                                    <button class="btn-checkout" title="Checkout" type="button" onclick="window.location=checkout.html"><span>Checkout</span></button>
+                                </div>
+                                <!--actions-->
+                            </div>
+                            <!--fl-mini-cart-content-->
+                        </div>
+                    </div>
+                    <!--mini-cart-->
+                    <div class="collapse navbar-collapse">
+                        <form class="navbar-form" role="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                                <span class="input-group-btn">
+                                    <button type="submit" class="search-btn"> <span class="glyphicon glyphicon-search"> <span class="sr-only">Search</span> </span> </button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                    <!--links-->
+                </div>
+            </div>
+        </div>
+
+        <div>@RenderBody()</div>
+        <footer>
+            <!-- BEGIN INFORMATIVE FOOTER -->
+            <div class="footer-inner">
+                <div class="newsletter-row">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col">
+                                <!-- Footer Payment Link -->
+                                <div class="payment-accept">
+                                    <div>
+                                        <img src="\Content\images\payment-1.png" alt="payment1"> <img src="\Content\images\payment-2.png" alt="payment2"> <img src="\Content\images\payment-3.png" alt="payment3">
+                                        <img src="\Content\images\payment-4.png" alt="payment4">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Footer Newsletter -->
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col1">
+                                <div class="newsletter-wrap">
+                                    <h4>Sign up for emails</h4>
+                                    <form action="#" method="post" id="newsletter-validate-detail1">
+                                        <div id="container_form_news">
+                                            <div id="container_form_news2">
+                                                <input type="text" name="email" id="newsletter1" title="Sign up for our newsletter" class="input-text required-entry validate-email" placeholder="Enter your email address">
+                                                <button type="submit" title="Subscribe" class="button subscribe"><span>Subscribe</span></button>
+                                            </div>
+                                            <!--container_form_news2-->
+                                        </div>
+                                        <!--container_form_news-->
+                                    </form>
+
+                                </div>
+                                <!--newsletter-wrap-->
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--footer-column-last-->
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-12 col-lg-4">
+                            <div class="co-info">
+                                <div><a href="@Url.Action("Index", "Home")"><img src="\Content\images\logo.png" alt="footer logo"></a></div>
+                                <address>
+                                    <div><em class="icon-location-arrow"></em> <span>ABC Town Luton Street, New York 226688</span></div>
+                                    <div> <em class="icon-mobile-phone"></em><span> + 0800 567 345</span></div>
+                                    <div> <em class="icon-envelope"></em><span>support@themesmart.net</span></div>
+                                </address>
+                                <div class="social">
+                                    <ul class="link">
+                                        <li class="fb pull-left"><a target="_blank" rel="nofollow" href="#" title="Facebook"></a></li>
+                                        <li class="tw pull-left"><a target="_blank" rel="nofollow" href="#" title="Twitter"></a></li>
+                                        <li class="googleplus pull-left"><a target="_blank" rel="nofollow" href="#" title="GooglePlus"></a></li>
+                                        <li class="rss pull-left"><a target="_blank" rel="nofollow" href="#" title="RSS"></a></li>
+                                        <li class="pintrest pull-left"><a target="_blank" rel="nofollow" href="#" title="PInterest"></a></li>
+                                        <li class="linkedin pull-left"><a target="_blank" rel="nofollow" href="#" title="Linkedin"></a></li>
+                                        <li class="youtube pull-left"><a target="_blank" rel="nofollow" href="#" title="Youtube"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-8 col-xs-12 col-lg-8">
+                            <div class="footer-column">
+                                <h4>Quick Links</h4>
+                                <ul class="links">
+                                    <li class="first"><a title="How to buy" href="/blog/">Blog</a></li>
+                                    <li><a title="FAQs" href="#">FAQs</a></li>
+                                    <li><a title="Payment" href="#">Payment</a></li>
+                                    <li><a title="Shipment" href="#">Shipment</a></li>
+                                    <li><a title="Where is my order?" href="#">Where is my order?</a></li>
+                                    <li class="last"><a title="Return policy" href="#">Return policy</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-column">
+                                <h4>Style Advisor</h4>
+                                <ul class="links">
+                                    <li class="first"><a title="Your Account" href="#">Your Account</a></li>
+                                    <li><a title="Information" href="#">Information</a></li>
+                                    <li><a title="Addresses" href="#">Addresses</a></li>
+                                    <li><a title="Addresses" href="#">Discount</a></li>
+                                    <li><a title="Orders History" href="#">Orders History</a></li>
+                                    <li class="last"><a title=" Additional Information" href="#"> Additional Information</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-column">
+                                <h4>Information</h4>
+                                <ul class="links">
+                                    <li class="first"><a title="Site Map" href="#">Site Map</a></li>
+                                    <li><a title="Search Terms" href="#">Search Terms</a></li>
+                                    <li><a title="Advanced Search" href="#">Advanced Search</a></li>
+                                    <li><a title="History" href="#">About Us</a></li>
+                                    <li><a title="History" href="#">Contact Us</a></li>
+                                    <li><a title="Suppliers" href="#">Suppliers</a></li>
+                                </ul>
+                            </div>
+
+
+
+
+                        </div>
+
+                        <!--col-sm-12 col-xs-12 col-lg-8-->
+                        <!--col-xs-12 col-lg-4-->
+                    </div>
+                    <!--row-->
+
+                </div>
+
+                <!--container-->
+            </div>
+            <!--footer-inner-->
+
+            <div class="footer-middle">
+                <div class="container">
+                    <div class="row">
+                        <div class="row"> </div>
+                    </div>
+                    <!--row-->
+                </div>
+                <!--container-->
+            </div>
+            <!--footer-middle-->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12 coppyright">Â© 2015 Flavours. All Rights Reserved.</div>
+
+                    </div>
+                    <!--row-->
+                </div>
+                <!--container-->
+            </div>
+            <!--footer-bottom-->
+            <!-- BEGIN SIMPLE FOOTER -->
+        </footer>
+    </div>
+</body>
+</html>
